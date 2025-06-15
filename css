@@ -126,3 +126,38 @@ button {
     margin-top: 5px;
   }
 }
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode nav a {
+  color: #ddd;
+}
+
+body.dark-mode main {
+  background: #1c1c1c;
+  color: #f1f1f1;
+}
+
+body.dark-mode .job-card {
+  background: #2b2b2b;
+  border-color: #444;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background: #222;
+  color: #eee;
+  border-color: #555;
+}
+
+body.dark-mode button {
+  background: #444;
+  color: white;
+}
