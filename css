@@ -61,6 +61,23 @@ footer {
   margin-top: 0;
   color: #222;
 }
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .dark-mode-toggle,
+  .topbar input[type="text"] {
+    width: 100%;
+  }
+}
 
 .job-card p {
   color: #444;
