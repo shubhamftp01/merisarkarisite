@@ -21,6 +21,8 @@
   </header>
 
   <main>
+    <input type="text" id="searchInput" placeholder="Search jobs..." style="width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px;" />
+
     <h2>📢 Latest Government Job Updates</h2>
     <div class="job-list">
       <div class="job-card">
@@ -46,8 +48,23 @@
   </footer>
 
   <script>
+    // Toggle Dark Mode
     const toggleBtn = document.getElementById("toggleMode");
     toggleBtn.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
     });
+
+    // Search Filter
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("keyup", function () {
+      const filter = searchInput.value.toLowerCase();
+      const jobCards = document.querySelectorAll(".job-card");
+
+      jobCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(filter) ? "block" : "none";
+      });
+    });
   </script>
+</body>
+</html>
