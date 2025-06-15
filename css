@@ -78,6 +78,50 @@ footer {
     width: 100%;
   }
 }
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.job-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  position: relative;
+}
+
+.job-card h3 {
+  margin: 0 0 5px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+  color: white;
+  margin-right: 10px;
+}
+
+.badge.new {
+  background-color: green;
+}
+
+.badge.result {
+  background-color: blue;
+}
+
+.badge.exam {
+  background-color: orange;
+}
+
+.date {
+  font-size: 12px;
+  color: gray;
+}
+
 
 .job-card p {
   color: #444;
