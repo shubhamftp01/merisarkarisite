@@ -1,35 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sarkari Alert - Govt Job Updates</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarkari Alert</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+    }
+
+    header {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #3949ab;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .alert {
+      background-color: #fff;
+      border-left: 5px solid #1a237e;
+      padding: 10px 15px;
+      margin: 10px 0;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Sarkari Alert</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="jobs.html">Jobs</a>
-      <a href="results.html">Results</a>
-      <a href="admitcard.html">Admit Card</a>
-      <a href="syllabus.html">Syllabus</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
 
+  <nav>
+    <a href="#">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="results.html">Results</a>
+    <a href="admitcard.html">Admit Card</a>
+    <a href="syllabus.html">Syllabus</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <main>
-    <section>
-      <h2>📢 Latest Government Job Updates</h2>
-      <ul>
-        <li><a href="#">UPSSSC PET 2025 Online Form</a></li>
-        <li><a href="#">SSC GD Constable Result 2025</a></li>
-        <li><a href="#">RRB Group D Exam Date Released</a></li>
-      </ul>
-    </section>
+    <h2>📢 Latest Government Job Updates</h2>
+
+    <div class="alert">UPSSSC PET 2025 Online Form</div>
+    <div class="alert">SSC GD Constable Result 2025</div>
+    <div class="alert">RRB Group D Exam Date Released</div>
+
   </main>
 
   <footer>
-    <p>© 2025 Sarkari Alert. All Rights Reserved.</p>
+    &copy; 2025 Sarkari Alert. All Rights Reserved.
   </footer>
+
 </body>
 </html>
