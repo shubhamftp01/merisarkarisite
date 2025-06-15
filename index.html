@@ -3,138 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarkari Alert</title>
+  <title>Sarkari Alert | Home</title>
   <link rel="stylesheet" href="css/style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header {
-      background-color: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #444;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background: #eee;
-    }
-
-    .topbar input[type="text"] {
-      padding: 8px;
-      width: 200px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .dark-mode-toggle {
-      padding: 8px 12px;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-
-    body.dark-mode {
-      background-color: #121212;
-      color: white;
-    }
-
-    body.dark-mode header,
-    body.dark-mode nav,
-    body.dark-mode footer {
-      background-color: #1e1e1e;
-    }
-
-    body.dark-mode .topbar {
-      background: #222;
-    }
-  </style>
 </head>
 <body>
-
   <header>
     <h1>Sarkari Alert</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="jobs.html">Jobs</a> |
+      <a href="results.html">Results</a> |
+      <a href="admitcard.html">Admit Card</a> |
+      <a href="syllabus.html">Syllabus</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="toggleMode" style="margin-top: 10px;">🌙 Toggle Dark Mode</button>
   </header>
 
-  <div class="topbar">
-    <input type="text" placeholder="Search Exams...">
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="jobs.html">Jobs</a>
-    <a href="results.html">Results</a>
-    <a href="admitcard.html">Admit Card</a>
-    <a href="syllabus.html">Syllabus</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
   <main>
-    <h2>🔔 Welcome to Sarkari Alert</h2>
-    <p>Get all government job alerts, exam results, admit cards, and syllabus in one place.</p>
+    <h2>📢 Latest Government Job Updates</h2>
+    <div class="job-list">
+      <div class="job-card">
+        <strong>UPSSSC PET 2025 Online Form</strong>
+        <span class="badge new">New</span>
+        <span class="date">15 June 2025</span>
+      </div>
+      <div class="job-card">
+        <strong>SSC GD Constable Result 2025</strong>
+        <span class="badge result">Result</span>
+        <span class="date">14 June 2025</span>
+      </div>
+      <div class="job-card">
+        <strong>RRB Group D Exam Date Released</strong>
+        <span class="badge exam">Exam</span>
+        <span class="date">13 June 2025</span>
+      </div>
+    </div>
   </main>
 
-  <footer> 
-    &copy; 2025 Sarkari Alert. All Rights Reserved.
   <footer>
-  <p>&copy; 2025 Sarkari Alert. All Rights Reserved.</p>
-  <a href="https://wa.me/?text=Check%20this%20awesome%20Sarkari%20Result%20site%20https://shubhamftp01.github.io/merisarkarisite/" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Share on WhatsApp" style="width:40px;height:40px;">
-  </a>
-</footer>
-
+    <p>&copy; 2025 Sarkari Alert. All Rights Reserved.</p>
+  </footer>
 
   <script>
-    function toggleDarkMode() {
+    const toggleBtn = document.getElementById("toggleMode");
+    toggleBtn.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
-    }
+    });
   </script>
-</body>
-</html>
-<script>
-  const toggleBtn = document.getElementById("toggleMode");
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
-
