@@ -2,94 +2,221 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarkari Alert | Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shubham Job Alert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header, footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    nav {
+      background-color: #444;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #eee;
+    }
+
+    .topbar input[type="text"] {
+      padding: 8px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .dark-mode-toggle {
+      padding: 8px 12px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .job-card {
+      background: #fff;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 4px solid #4CAF50;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .job-card strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .badge {
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+
+    .badge.job {
+      background-color: green;
+      color: white;
+    }
+
+    .date {
+      float: right;
+      color: gray;
+      font-size: 13px;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .apply-btn:hover {
+      background-color: #388e3c;
+    }
+
+    #steps {
+      background: #f4f4f4;
+      padding: 20px;
+      margin-top: 30px;
+      border-top: 2px solid #4CAF50;
+      border-radius: 8px;
+    }
+
+    #steps h2 {
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    #steps ol {
+      padding-left: 20px;
+    }
+
+    #steps li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+
+    body.dark-mode header,
+    body.dark-mode nav,
+    body.dark-mode footer {
+      background-color: #1e1e1e;
+    }
+
+    body.dark-mode .topbar {
+      background: #222;
+    }
+
+    body.dark-mode .job-card {
+      background-color: #1e1e1e;
+      color: white;
+      border-left-color: #4CAF50;
+    }
+
+    body.dark-mode .apply-btn {
+      background-color: #388e3c;
+    }
+  </style>
 </head>
-<body><div class="app-banner">
-  📲 Download Our Mobile App for Daily Sarkari Updates  
-  <a href="#">Download Now</a>
-</div>
+<body>
 
   <header>
-    <h1>Sarkari Alert</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="jobs.html">Jobs</a> |
-      <a href="results.html">Results</a> |
-      <a href="admitcard.html">Admit Card</a> |
-      <a href="syllabus.html">Syllabus</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button id="toggleMode" style="margin-top: 10px;">🌙 Toggle Dark Mode</button>
+    <h1>Shubham Job Alert</h1>
   </header>
 
-  <main><main>
-  <h2>🔔 Welcome to Sarkari Alert</h2>
-  <p>Get all government job alerts, exam results, admit cards, and syllabus in one place.</p>
+  <div class="topbar">
+    <input type="text" placeholder="Search Jobs...">
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+  </div>
 
-  <!-- ✅ Step-by-Step Section Start -->
-  <section id="steps">
-    <h2>📋 How to Apply for Jobs</h2>
-    <ol>
-      <li><strong>Step 1:</strong> Visit the official job website or our portal.</li>
-      <li><strong>Step 2:</strong> Click on the "Latest Jobs" section.</li>
-      <li><strong>Step 3:</strong> Select your desired job and read full notification.</li>
-      <li><strong>Step 4:</strong> Click on "Apply Online" link and fill the form.</li>
-      <li><strong>Step 5:</strong> Upload required documents and pay the fee.</li>
-      <li><strong>Step 6:</strong> Submit your application and take a printout.</li>
-    </ol>
-  </section>
-  <!-- ✅ Step-by-Step Section End -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Jobs</a>
+    <a href="#">Results</a>
+    <a href="#">Admit Card</a>
+    <a href="#">Syllabus</a>
+    <a href="#">Contact</a>
+  </nav>
 
-</main>
+  <main>
+    <h2>📢 Latest Government Jobs</h2>
 
-</section>
-
-    <input type="text" id="searchInput" placeholder="Search jobs..." style="width: 100%; padding: 10px; margin-bottom: 20px; font-size: 16px;" />
-
-    <h2>📢 Latest Government Job Updates</h2>
-    <div class="job-list">
-      <div class="job-card">
-        <strong>UPSSSC PET 2025 Online Form</strong>
-        <span class="badge new">New</span>
-        <span class="date">15 June 2025</span>
-      </div>
-      <div class="job-card">
-        <strong>SSC GD Constable Result 2025</strong>
-        <span class="badge result">Result</span>
-        <span class="date">14 June 2025</span>
-      </div>
-      <div class="job-card">
-        <strong>RRB Group D Exam Date Released</strong>
-        <span class="badge exam">Exam</span>
-        <span class="date">13 June 2025</span>
-      </div>
+    <div class="job-card">
+      <strong>UPSSSC PET 2025 Online Form</strong>
+      <span class="badge job">JOB</span>
+      <span class="date">15-06-2025</span><br>
+      <a href="https://upsssc.gov.in/ApplyOnline.aspx" target="_blank" class="apply-btn">Apply Now</a>
     </div>
+
+    <div class="job-card">
+      <strong>Bihar Police Constable Online Form</strong>
+      <span class="badge job">JOB</span>
+      <span class="date">16-06-2025</span><br>
+      <a href="https://csbc.bih.nic.in/" target="_blank" class="apply-btn">Apply Now</a>
+    </div>
+
+    <!-- Step-by-step Guide -->
+    <section id="steps">
+      <h2>📋 How to Apply for Jobs</h2>
+      <ol>
+        <li><strong>Step 1:</strong> Visit the official job website or our portal.</li>
+        <li><strong>Step 2:</strong> Go to the "Latest Jobs" section.</li>
+        <li><strong>Step 3:</strong> Read the full job notification carefully.</li>
+        <li><strong>Step 4:</strong> Click on the "Apply Online" button.</li>
+        <li><strong>Step 5:</strong> Fill in your details, upload documents, and pay the fee.</li>
+        <li><strong>Step 6:</strong> Submit and take a printout of your application.</li>
+      </ol>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Sarkari Alert. All Rights Reserved.</p>
+    &copy; 2025 Shubham Job Alert. All rights reserved.
   </footer>
 
   <script>
-    // Toggle Dark Mode
-    const toggleBtn = document.getElementById("toggleMode");
-    toggleBtn.addEventListener("click", () => {
+    function toggleDarkMode() {
       document.body.classList.toggle("dark-mode");
-    });
-
-    // Search Filter
-    const searchInput = document.getElementById("searchInput");
-    searchInput.addEventListener("keyup", function () {
-      const filter = searchInput.value.toLowerCase();
-      const jobCards = document.querySelectorAll(".job-card");
-
-      jobCards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        card.style.display = text.includes(filter) ? "block" : "none";
-      });
-    });
+    }
   </script>
+
 </body>
 </html>
