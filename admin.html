@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel - Shubham Job Alert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 30px;
+    }
+    h2 {
+      text-align: center;
+      color: green;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .success {
+      color: green;
+      text-align: center;
+      display: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Admin Panel - Add New Update</h2>
+
+  <form id="adminForm">
+    <input type="text" id="title" placeholder="Enter Title" required />
+    <input type="date" id="date" required />
+    <input type="url" id="link" placeholder="Enter Link (https://...)" required />
+    <select id="type" required>
+      <option value="">Select Type</option>
+      <option value="Job">Job</option>
+      <option value="Result">Result</option>
+      <option value="Admit Card">Admit Card</option>
+    </select>
+    <button type="submit">Add to Website</button>
+    <div class="success" id="successMsg">✅ Entry Added Successfully!</div>
+  </form>
+
+  <script>
+    const form = document.getElementById("adminForm");
+    const successMsg = document.getElementById("successMsg");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const data = {
+        Title: document.getElementById("title").value,
+        Date: document.getElementById("date").value,
+        Link: document.getElementById("link").value,
+        Type: document.getElementById("type").value,
+      };
+
+      fetch("https://sheet.best/api/sheets/abc1234-xyz5678", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => {
+          if (response.ok) {
+            form.reset();
+            successMsg.style.display = "block";
+          }
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+  </script>
+</body>
+</html>
