@@ -2,91 +2,241 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shubham Job Alert</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header, footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    nav {
+      background-color: #444;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #eee;
+    }
+    .topbar input[type="text"] {
+      padding: 8px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .dark-mode-toggle {
+      padding: 8px 12px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    main {
+      padding: 20px;
+    }
+    .three-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .card-box {
+      background: #fff;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      flex: 1;
+      min-width: 280px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .card-box h3 {
+      margin-top: 0;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .card-box ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .card-box li {
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-box a {
+      text-decoration: none;
+      color: #007bff;
+    }
+    .badge {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 3px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .badge.job { background-color: green; }
+    .badge.result { background-color: orange; }
+    .badge.exam { background-color: blue; }
+    .job-card {
+      background: #fff;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 4px solid #4CAF50;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .job-card strong {
+      display: block;
+      font-size: 18px;
+    }
+    .apply-btn, .whatsapp-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .apply-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+    }
+    #testimonials {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-top: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+    }
+    .testimonial {
+      margin-bottom: 15px;
+      padding: 10px;
+      background: #fff;
+      border-left: 5px solid #4CAF50;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .testimonial p {
+      font-style: italic;
+    }
+    footer {
+      margin-top: 30px;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+    body.dark-mode header,
+    body.dark-mode nav,
+    body.dark-mode footer,
+    body.dark-mode .topbar {
+      background-color: #1e1e1e;
+    }
+    body.dark-mode .card-box,
+    body.dark-mode .job-card,
+    body.dark-mode .testimonial {
+      background: #1e1e1e;
+      color: white;
+    }
+    body.dark-mode .whatsapp-btn {
+      background-color: #2fe07b;
+    }
+  </style>
 </head>
 <body>
-
   <header>
     <h1>📢 Shubham Job Alert</h1>
   </header>
 
   <div class="topbar">
     <input type="text" placeholder="Search Jobs...">
-    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
   </div>
 
   <nav>
-    <a href="index.html">Home</a>
+    <a href="#">Home</a>
     <a href="jobs.html">Jobs</a>
-    <a href="admitcard.html">Admit Card</a>
     <a href="results.html">Results</a>
+    <a href="admitcard.html">Admit Card</a>
     <a href="syllabus.html">Syllabus</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <main>
-    <h2>Latest Government Updates</h2>
+    <h2>📢 Latest Updates</h2>
 
-    <div class="columns">
-      <!-- 🟢 Jobs -->
-      <div class="column">
+    <div class="three-columns">
+      <div class="card-box">
         <h3>📝 Latest Jobs</h3>
-        <div class="job-card">
-          <strong>UP Police Constable 2025</strong>
-          <span class="badge job">JOB</span>
-          <span class="date">16-06-2025</span><br>
-          <a href="#" class="apply-btn">Apply Now</a>
-        </div>
+        <ul>
+          <li><a href="#">UPSSSC PET 2025 Online Form</a><span class="badge job">Apply</span></li>
+          <li><a href="#">SSC GD Constable Online Form</a><span class="badge job">Apply</span></li>
+          <li><a href="#">Bihar Police SI Vacancy</a><span class="badge job">Apply</span></li>
+        </ul>
       </div>
 
-      <!-- 🟡 Admit Card -->
-      <div class="column">
-        <h3>🎫 Admit Card</h3>
-        <div class="job-card">
-          <strong>RRB Group D Admit Card</strong>
-          <span class="badge exam">ADMIT</span>
-          <span class="date">15-06-2025</span><br>
-          <a href="#" class="apply-btn">Download</a>
-        </div>
+      <div class="card-box">
+        <h3>📄 Sarkari Results</h3>
+        <ul>
+          <li><a href="#">SSC GD Constable Result 2025</a><span class="badge result">Check</span></li>
+          <li><a href="#">UPSSSC PET Result 2025</a><span class="badge result">Check</span></li>
+          <li><a href="#">RRB NTPC CBT-2 Result</a><span class="badge result">Check</span></li>
+        </ul>
       </div>
-      <main>
-  <h2>Latest Government Updates</h2>
 
-  <!-- ⬇⬇ Paste yahan se -->
-  <section>
-    <h2>📝 Latest Jobs</h2>
+      <div class="card-box">
+        <h3>🎫 Admit Cards</h3>
+        <ul>
+          <li><a href="#">RRB Group D Admit Card</a><span class="badge exam">Download</span></li>
+          <li><a href="#">UPSC Pre 2025 Admit Card</a><span class="badge exam">Download</span></li>
+          <li><a href="#">CTET July 2025 Admit Card</a><span class="badge exam">Download</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <section id="testimonials">
+      <h2>🌟 What Users Say</h2>
+      <div class="testimonial">
+        <p>"Shubham Job Alert ने मुझे पहली ही बार में सही Job दिलवाई!"</p>
+        <strong>– Rahul Singh, Lucknow</strong>
+      </div>
+      <div class="testimonial">
+        <p>"बहुत ही आसान वेबसाइट है, सभी updates टाइम पर मिलते हैं।"</p>
+        <strong>– Priya Sharma, Patna</strong>
+      </div>
+    </section>
 
     <div class="job-card">
       <strong>UP Police Constable Online Form</strong>
       <span class="badge job">JOB</span>
       <span class="date">16-06-2025</span><br>
       <a href="https://uppolice.gov.in" target="_blank" class="apply-btn">Apply Now</a>
-    </div>
-
-    <div class="job-card">
-      <strong>Bihar SI Recruitment 2025</strong>
-      <span class="badge job">JOB</span>
-      <span class="date">14-06-2025</span><br>
-      <a href="https://bpsc.bih.nic.in" target="_blank" class="apply-btn">Apply Now</a>
-    </div>
-  </section>
-  <!-- ⬆⬆ Paste yahan tak -->
-
-</main>
-
-
-      <!-- 🔴 Results -->
-      <div class="column">
-        <h3>📄 Results</h3>
-        <div class="job-card">
-          <strong>SSC GD Result 2025</strong>
-          <span class="badge result">RESULT</span>
-          <span class="date">14-06-2025</span><br>
-          <a href="#" class="apply-btn">Check</a>
-        </div>
-      </div>
+      <a href="https://wa.me/?text=UP%20Police%20Constable%20Form%20Apply%20Link:%20https://uppolice.gov.in" target="_blank" class="whatsapp-btn">📤 Share on WhatsApp</a>
     </div>
   </main>
 
@@ -96,9 +246,8 @@
 
   <script>
     function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle("dark-mode");
     }
   </script>
 </body>
 </html>
-
