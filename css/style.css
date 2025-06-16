@@ -1,31 +1,36 @@
-/* ===== General Reset ===== */
+/* ===== Body and Theme ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
   color: #222;
-  transition: background-color 0.3s, color 0.3s;
+  transition: 0.3s ease;
 }
 
-/* ===== Header ===== */
-header {
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* ===== Header & Footer ===== */
+header, footer {
   background-color: #222;
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  padding: 15px;
 }
 
 /* ===== Navigation ===== */
 nav {
-  background-color: #444;
+  background: #444;
   text-align: center;
   padding: 10px;
 }
 
 nav a {
-  color: white;
-  margin: 0 15px;
+  color: #fff;
+  margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -34,7 +39,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ===== Top Bar ===== */
+/* ===== Topbar ===== */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -43,162 +48,99 @@ nav a:hover {
   background: #eee;
 }
 
-.topbar input[type="text"] {
+.topbar input {
   padding: 8px;
-  width: 200px;
+  width: 60%;
+  max-width: 300px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
-.dark-mode-toggle {
+.topbar button {
   padding: 8px 12px;
-  background-color: #333;
+  background-color: #222;
   color: white;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* ===== Main Area ===== */
-main {
-  padding: 20px;
-}
-
-/* ===== Job Cards ===== */
-.job-card {
-  background: #fff;
-  padding: 15px;
-  margin: 15px 0;
-  border-left: 4px solid #4CAF50;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.job-card strong {
-  display: block;
-  font-size: 18px;
-}
-
-.badge {
-  padding: 2px 8px;
-  border-radius: 3px;
-  font-size: 12px;
-  margin-left: 10px;
-}
-
-.badge.job {
-  background-color: green;
-  color: white;
-}
-
-.badge.result {
-  background-color: orange;
-  color: white;
-}
-
-.badge.exam {
-  background-color: blue;
-  color: white;
-}
-
-.date {
-  float: right;
-  color: gray;
-  font-size: 13px;
-}
-
-/* ===== Apply Button ===== */
-.apply-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 15px;
-  background-color: #4CAF50;
-  color: white;
-  text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.apply-btn:hover {
-  background-color: #388e3c;
-}
-
-/* ===== Step-by-Step Guide ===== */
-#steps {
-  background: #f4f4f4;
-  padding: 20px;
-  margin-top: 30px;
-  border-top: 2px solid #4CAF50;
-  border-radius: 8px;
-}
-
-#steps h2 {
-  color: #333;
-  margin-bottom: 15px;
-}
-
-#steps ol {
-  padding-left: 20px;
-}
-
-#steps li {
-  margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* ===== Footer ===== */
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-
-/* ===== Dark Mode Styles ===== */
-body.dark-mode {
-  background-color: #121212;
-  color: #eee;
-}
-
-body.dark-mode header,
-body.dark-mode nav,
-body.dark-mode footer {
-  background-color: #1e1e1e;
+  cursor: pointer;
 }
 
 body.dark-mode .topbar {
   background: #222;
 }
 
-body.dark-mode .job-card {
+body.dark-mode nav,
+body.dark-mode header,
+body.dark-mode footer {
   background-color: #1e1e1e;
+}
+
+/* ===== Main Layout ===== */
+main {
+  padding: 20px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* ===== Job Card ===== */
+.job-card {
+  background: #fff;
+  padding: 15px;
+  border-left: 4px solid #4CAF50;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+body.dark-mode .job-card {
+  background: #1e1e1e;
   color: white;
-  border-left-color: #4CAF50;
 }
 
-body.dark-mode .apply-btn {
-  background-color: #388e3c;
+.job-card strong {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-body.dark-mode .badge.job {
-  background-color: darkgreen;
+.badge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-right: 8px;
+  color: white;
 }
 
-body.dark-mode .badge.result {
-  background-color: darkorange;
+.badge.job { background-color: green; }
+.badge.exam { background-color: blue; }
+.badge.result { background-color: orange; }
+
+.date {
+  float: right;
+  font-size: 13px;
+  color: gray;
 }
 
-body.dark-mode .badge.exam {
-  background-color: darkblue;
+/* ===== Buttons ===== */
+.apply-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-body.dark-mode #steps {
-  background: #1a1a1a;
+.apply-btn:hover {
+  background: #388e3c;
 }
-
-body.dark-mode #steps li {
-  color: #eee;
-}
-
