@@ -12,7 +12,6 @@
       padding: 0;
       background-color: #f9f9f9;
       color: #222;
-      transition: background-color 0.3s, color 0.3s;
     }
     header, footer {
       background-color: #222;
@@ -147,25 +146,6 @@
     footer {
       margin-top: 30px;
     }
-    body.dark-mode {
-      background-color: #121212;
-      color: #eee;
-    }
-    body.dark-mode header,
-    body.dark-mode nav,
-    body.dark-mode footer,
-    body.dark-mode .topbar {
-      background-color: #1e1e1e;
-    }
-    body.dark-mode .card-box,
-    body.dark-mode .job-card,
-    body.dark-mode .testimonial {
-      background: #1e1e1e;
-      color: white;
-    }
-    body.dark-mode .whatsapp-btn {
-      background-color: #2fe07b;
-    }
   </style>
 </head>
 <body>
@@ -175,7 +155,7 @@
 
   <div class="topbar">
     <input type="text" placeholder="Search Jobs...">
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
   </div>
 
   <nav>
@@ -189,32 +169,31 @@
 
   <main>
     <h2>📢 Latest Updates</h2>
-
     <div class="three-columns">
       <div class="card-box">
         <h3>📝 Latest Jobs</h3>
         <ul>
-          <li><a href="https://upsssc.gov.in/AllNotifications.aspx">UPSSSC PET 2025 Online Form</a><span class="badge job">Apply</span></li>
-          <li><a href="	https://ssc.nic.in/">SSC GD Constable Online Form</a><span class="badge job">Apply</span></li>
-          <li><a href="https://csbc.bih.nic.in/">Bihar Police SI Vacancy</a><span class="badge job">Apply</span></li>
+          <li><a href="https://upsssc.gov.in/AllNotifications.aspx" target="_blank">UPSSSC PET 2025 Online Form</a><span class="badge job">Apply</span></li>
+          <li><a href="https://ssc.nic.in/" target="_blank">SSC GD Constable Online Form</a><span class="badge job">Apply</span></li>
+          <li><a href="https://csbc.bih.nic.in/" target="_blank">Bihar Police SI Vacancy</a><span class="badge job">Apply</span></li>
         </ul>
       </div>
 
       <div class="card-box">
         <h3>📄 Sarkari Results</h3>
         <ul>
-          <li><a href="https://ssc.nic.in/Result">SSC GD Constable Result 2025</a><span class="badge result">Check</span></li>
-          <li><a href="https://upsssc.gov.in">UPSSSC PET Result 2025</a><span class="badge result">Check</span></li>
-          <li><a href="https://www.rrbcdg.gov.in/">RRB NTPC CBT-2 Result</a><span class="badge result">Check</span></li>
+          <li><a href="https://ssc.nic.in/Result" target="_blank">SSC GD Constable Result 2025</a><span class="badge result">Check</span></li>
+          <li><a href="https://upsssc.gov.in" target="_blank">UPSSSC PET Result 2025</a><span class="badge result">Check</span></li>
+          <li><a href="https://www.rrbcdg.gov.in/" target="_blank">RRB NTPC CBT-2 Result</a><span class="badge result">Check</span></li>
         </ul>
       </div>
 
       <div class="card-box">
         <h3>🎫 Admit Cards</h3>
         <ul>
-          <li><a href="https://www.rrbcdg.gov.in/AdmitCard">RRB Group D Admit Card</a><span class="badge exam">Download</span></li>
-          <li><a href="https://upsc.gov.in/admitcard">UPSC Pre 2025 Admit Card</a><span class="badge exam">Download</span></li>
-          <li><a href="	https://ctet.nic.in">CTET July 2025 Admit Card</a><span class="badge exam">Download</span></li>
+          <li><a href="https://www.rrbcdg.gov.in/AdmitCard" target="_blank">RRB Group D Admit Card</a><span class="badge exam">Download</span></li>
+          <li><a href="https://upsc.gov.in/admitcard" target="_blank">UPSC Pre 2025 Admit Card</a><span class="badge exam">Download</span></li>
+          <li><a href="https://ctet.nic.in" target="_blank">CTET July 2025 Admit Card</a><span class="badge exam">Download</span></li>
         </ul>
       </div>
     </div>
@@ -243,11 +222,5 @@
   <footer>
     &copy; 2025 Shubham Job Alert. All rights reserved.
   </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-  </script>
 </body>
 </html>
