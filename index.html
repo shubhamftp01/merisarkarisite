@@ -4,270 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shubham Job Alert</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header, footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-    }
-
-    nav {
-      background-color: #444;
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background: #eee;
-    }
-
-    .topbar input[type="text"] {
-      padding: 8px;
-      width: 200px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .dark-mode-toggle {
-      padding: 8px 12px;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    main {<h2>📢 Latest Government Updates</h2>
-
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between;">
-
-  <!-- 🟢 Jobs Section -->
-  <div style="flex: 1; min-width: 300px;">
-    <h3>📝 Latest Jobs</h3>
-
-    <div class="job-card">
-      <strong>UP Police Constable Online Form</strong>
-      <span class="badge job">JOB</span>
-      <span class="date">16-06-2025</span><br>
-      <a href="https://uppolice.gov.in" target="_blank" class="apply-btn">Apply Now</a>
-    </div>
-
-    <div class="job-card">
-      <strong>SSC GD 2025 Online Form</strong>
-      <span class="badge job">JOB</span>
-      <span class="date">14-06-2025</span><br>
-      <a href="https://ssc.nic.in" target="_blank" class="apply-btn">Apply Now</a>
-    </div>
-  </div>
-
-  <!-- 🟡 Admit Cards Section -->
-  <div style="flex: 1; min-width: 300px;">
-    <h3>🎫 Admit Cards</h3>
-
-    <div class="job-card">
-      <strong>RRB Group D Admit Card</strong>
-      <span class="badge exam">ADMIT</span>
-      <span class="date">15-06-2025</span><br>
-      <a href="https://rrbcdg.gov.in" target="_blank" class="apply-btn">Download Now</a>
-    </div>
-
-    <div class="job-card">
-      <strong>UPSC Pre Admit Card 2025</strong>
-      <span class="badge exam">ADMIT</span>
-      <span class="date">12-06-2025</span><br>
-      <a href="https://upsc.gov.in" target="_blank" class="apply-btn">Download Now</a>
-    </div>
-  </div>
-
-  <!-- 🔴 Results Section -->
-  <div style="flex: 1; min-width: 300px;">
-    <h3>📄 Results</h3>
-
-    <div class="job-card">
-      <strong>SSC GD Constable Result</strong>
-      <span class="badge result">RESULT</span>
-      <span class="date">14-06-2025</span><br>
-      <a href="https://ssc.nic.in/results" target="_blank" class="apply-btn">Check Result</a>
-    </div>
-
-    <div class="job-card">
-      <strong>UPSSSC PET Result 2025</strong>
-      <span class="badge result">RESULT</span>
-      <span class="date">13-06-2025</span><br>
-      <a href="https://upsssc.gov.in" target="_blank" class="apply-btn">Check Result</a>
-    </div>
-  </div>
-
-</div>
-
-      padding: 20px;
-    }
-
-    .job-card {
-      background: #fff;
-      padding: 15px;
-      margin: 15px 0;
-      border-left: 4px solid #4CAF50;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .job-card strong {
-      display: block;
-      font-size: 18px;
-    }
-
-    .badge {
-      padding: 2px 8px;
-      border-radius: 3px;
-      font-size: 12px;
-      margin-left: 10px;
-    }
-
-    .badge.job {
-      background-color: green;
-      color: white;
-    }
-
-    .date {
-      float: right;
-      color: gray;
-      font-size: 13px;
-    }
-
-    .apply-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 15px;
-      background-color: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .apply-btn:hover {
-      background-color: #388e3c;
-    }
-
-    #steps {
-      background: #f4f4f4;
-      padding: 20px;
-      margin-top: 30px;
-      border-top: 2px solid #4CAF50;
-      border-radius: 8px;
-    }
-
-    #steps h2 {
-      color: #333;
-      margin-bottom: 15px;
-    }
-
-    #steps ol {
-      padding-left: 20px;
-    }
-
-    #steps li {
-      margin-bottom: 10px;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    body.dark-mode {
-      background-color: #121212;
-      color: white;
-    }
-
-    body.dark-mode header,
-    body.dark-mode nav,
-    body.dark-mode footer {
-      background-color: #1e1e1e;
-    }
-
-    body.dark-mode .topbar {
-      background: #222;
-    }
-
-    body.dark-mode .job-card {
-      background-color: #1e1e1e;
-      color: white;
-      border-left-color: #4CAF50;
-    }
-
-    body.dark-mode .apply-btn {
-      background-color: #388e3c;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
   <header>
-    <h1>Shubham Job Alert</h1>
+    <h1>📢 Shubham Job Alert</h1>
   </header>
 
   <div class="topbar">
     <input type="text" placeholder="Search Jobs...">
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
   </div>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Jobs</a>
-    <a href="#">Results</a>
-    <a href="#">Admit Card</a>
-    <a href="#">Syllabus</a>
-    <a href="#">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="jobs.html">Jobs</a>
+    <a href="admitcard.html">Admit Card</a>
+    <a href="results.html">Results</a>
+    <a href="syllabus.html">Syllabus</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <main>
-    <h2>📢 Latest Government Jobs</h2>
+    <h2>Latest Government Updates</h2>
 
-    <div class="job-card">
-      <strong>UPSSSC PET 2025 Online Form</strong>
-      <span class="badge job">JOB</span>
-      <span class="date">15-06-2025</span><br>
-      <a href="https://upsssc.gov.in/ApplyOnline.aspx" target="_blank" class="apply-btn">Apply Now</a>
+    <div class="columns">
+      <!-- 🟢 Jobs -->
+      <div class="column">
+        <h3>📝 Latest Jobs</h3>
+        <div class="job-card">
+          <strong>UP Police Constable 2025</strong>
+          <span class="badge job">JOB</span>
+          <span class="date">16-06-2025</span><br>
+          <a href="#" class="apply-btn">Apply Now</a>
+        </div>
+      </div>
+
+      <!-- 🟡 Admit Card -->
+      <div class="column">
+        <h3>🎫 Admit Card</h3>
+        <div class="job-card">
+          <strong>RRB Group D Admit Card</strong>
+          <span class="badge exam">ADMIT</span>
+          <span class="date">15-06-2025</span><br>
+          <a href="#" class="apply-btn">Download</a>
+        </div>
+      </div>
+
+      <!-- 🔴 Results -->
+      <div class="column">
+        <h3>📄 Results</h3>
+        <div class="job-card">
+          <strong>SSC GD Result 2025</strong>
+          <span class="badge result">RESULT</span>
+          <span class="date">14-06-2025</span><br>
+          <a href="#" class="apply-btn">Check</a>
+        </div>
+      </div>
     </div>
-
-    <div class="job-card">
-      <strong>Bihar Police Constable Online Form</strong>
-      <span class="badge job">JOB</span>
-      <span class="date">16-06-2025</span><br>
-      <a href="https://csbc.bih.nic.in/" target="_blank" class="apply-btn">Apply Now</a>
-    </div>
-
-    <!-- Step-by-step Guide -->
-    <section id="steps">
-      <h2>📋 How to Apply for Jobs</h2>
-      <ol>
-        <li><strong>Step 1:</strong> Visit the official job website or our portal.</li>
-        <li><strong>Step 2:</strong> Go to the "Latest Jobs" section.</li>
-        <li><strong>Step 3:</strong> Read the full job notification carefully.</li>
-        <li><strong>Step 4:</strong> Click on the "Apply Online" button.</li>
-        <li><strong>Step 5:</strong> Fill in your details, upload documents, and pay the fee.</li>
-        <li><strong>Step 6:</strong> Submit and take a printout of your application.</li>
-      </ol>
-    </section>
   </main>
 
   <footer>
@@ -276,9 +71,9 @@
 
   <script>
     function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle('dark-mode');
     }
   </script>
-
 </body>
 </html>
+
