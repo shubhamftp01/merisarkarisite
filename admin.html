@@ -67,32 +67,34 @@
     const form = document.getElementById("adminForm");
     const successMsg = document.getElementById("successMsg");
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
 
       const data = {
-        Title: document.getElementById("title").value,
+        Title: document.getElementById("title").value.trim(),
         Date: document.getElementById("date").value,
-        Link: document.getElementById("link").value,
-        Type: document.getElementById("type").value,
+        Link: document.getElementById("link").value.trim(),
+        Type: document.getElementById("type").value
       };
 
-      fetch("https://api.sheetbest.com/sheets/94ac95c9-653e-4e06-853e-fce790118928", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-      .then((response) => {
+      try {
+        const response = await fetch("https://api.sheetbest.com/sheets/94ac95c9-653e-4e06-853e-fce790118928", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+
         if (response.ok) {
           form.reset();
           successMsg.style.display = "block";
         } else {
-          alert("Something went wrong!");
+          alert("❌ Something went wrong.");
         }
-      })
-      .catch((error) => console.error("Error!", error.message));
+      } catch (error) {
+        console.error("Error!", error.message);
+      }
     });
   </script>
 
