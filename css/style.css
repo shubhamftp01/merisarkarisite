@@ -179,3 +179,48 @@ body.dark-mode .testimonial {
   transition: 0.2s ease-in-out;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+#steps {
+  background: #f4f4f4;
+  padding: 20px;
+  margin-top: 30px;
+  border-top: 2px solid #4CAF50;
+  border-radius: 8px;
+}
+
+#steps h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#steps ol {
+  padding-left: 20px;
+}
+
+#steps li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+#steps {
+  background: #f4f4f4;
+  padding: 20px;
+  margin-top: 30px;
+  border-top: 2px solid #4CAF50;
+  border-radius: 8px;
+}
+
+#steps h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#steps ol {
+  padding-left: 20px;
+}
+
+#steps li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
